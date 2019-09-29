@@ -1,4 +1,5 @@
 避免死锁
+http://ifeve.com/deadlock-prevention/
 1、加锁顺序
 
 2、加锁时限
