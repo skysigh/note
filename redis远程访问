@@ -1,0 +1,7 @@
+原文：https://www.cnblogs.com/gara/p/9524014.html
+
+linux 需要设置端口可以访问
+
+查看6379（或者自定义redis端口）时候打开
+firewall-cmd --query-port=6379/tcp 如果返回no则端口没有开启
+firewall-cmd --add-port=6379/tcp  （加 --permanent 永久有效），返回success说明开启成功
