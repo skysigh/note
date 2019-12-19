@@ -1,0 +1,9 @@
+原文：http://blog.sina.com.cn/s/blog_6ab8c71e0100yl9v.html
+
+主要是这个原因java.net.InetAddress.getLocalHost取本机ip的时候,在windows下取到的是正确的ip，而在linux下取到的是127.0.1.1（ubuntu10、fedora4 、as3下都是这样的），解决方案两种：
+1. 在jvm启动时增加参数java.rmi.server.hostname，-Djava.rmi.server.hostname=你的部署机器的ip
+
+2. 修改hosts文件
+我的处理方法是，修改了/etc/hosts文件，增加了一句话： 
+10.0.0.60   ubuntu
+// 前面是部署机器的ip，后面是主机名
